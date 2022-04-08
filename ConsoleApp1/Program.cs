@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.Classes;
+using System;
 
 namespace ConsoleApp1
 {
