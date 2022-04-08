@@ -4,9 +4,9 @@ namespace ConsoleApp1.Classes
 {
     internal class Home : IFood
     {
-        public void Cook()
+        public string Cook()
         {
-            System.Console.WriteLine("You dont need work");
+            return "Home";
         }
     }
 }

@@ -23,5 +23,15 @@ namespace ConsoleApp1.Classes
             salary = HourlyRate * Shift.CalculateWorkHours();
             return salary;
         }
+
+        public override string ToString()
+        {
+            string[] str = Shift.ToString().Split(' ');
+            if (str[str.Length - 1].Equals("Home"))
+                return "You not work today";
+            return String.Format("You work Cooker on {0} from {1} to {2}.\nYou have break from {3} to {4} and your " +
+                "hourly rate is {5}\nIf you will work all hours you get {6}", Shift.ToString(), Shift.GetStart().Hour, Shift.GetEnd().Hour, Shift.GetBreakStart().Hour
+                , Shift.GetBreakEnd().Hour, HourlyRate, CalculateSalary());
+        }
     }
 }

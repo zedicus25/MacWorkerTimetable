@@ -29,5 +29,30 @@ namespace ConsoleApp1.Classes
             result -= EndBreakHour.Subtract(StartBreakHour).Hours;
             return result;
         }
+
+        public DateTime GetStart()
+        {
+            return StartHour;
+        }
+
+        public DateTime GetEnd()
+        {
+            return EndHour;
+        }
+
+        public DateTime GetBreakStart()
+        {
+            return StartBreakHour;
+        }
+
+        public DateTime GetBreakEnd()
+        {
+            return EndBreakHour;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("Morning shift at {0}", Food.Cook());
+        }
     }
 }
